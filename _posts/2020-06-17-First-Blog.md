@@ -1,6 +1,13 @@
 ---
 published: false
 ---
-## A New Post
+---
+layout: post
+title:  "Welcome to Jekyll!"
+---
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+# Welcome
+
+**Hello world**, this is my first Jekyll blog post.
+
+I hope you like it!
