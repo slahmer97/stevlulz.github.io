@@ -1,34 +1,36 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import posts from "../posts/post_manager";
 import ReactHtmlParser from "react-html-parser";
-import Helmet from "react-helmet";
+import {Helmet} from "react-helmet-async";
 
-class Post extends Component {
+class Post extends PureComponent {
     constructor(props) {
         super(props);
 
-        this.state = {
-            title: "",
-            time: "",
-            body: "<div></div>"
-        }
-    }
-
-    componentDidMount() {
         let slug = window.location.pathname.replace("/posts/", "")
         slug = slug.replace(/-/g, " ")
+        let isOK = false
         for (let i = 0; i < posts.length; i++)
             if (posts[i].title === slug) {
-                this.setState({
+                this.state = {
+                    slug: slug,
                     title: posts[i].title,
                     time: posts[i].time,
                     body: posts[i].body
-                })
+                }
+                isOK = true
                 break;
             }
-        console.log(slug);
-    }
 
+        if (!isOK){
+            this.state = {
+                slug: "",
+                title: "Post Not Found",
+                time: "",
+                body: "<div></div>"
+            }
+        }
+    }
     render() {
         const {title, time, body} = this.state
         return (
@@ -46,10 +48,10 @@ class Post extends Component {
                         </section>
                     </div>
                 </article>
-                <Helmet>
+                <Helmet key={window.location.href}>
+                    title={this.state.title ?? "404"}
                     <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
                 </Helmet>
-
             </>
         );
     }

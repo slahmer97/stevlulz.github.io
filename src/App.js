@@ -8,11 +8,13 @@ import Recents from "./compontents/recents";
 import About from "./compontents/about";
 import Posts from "./compontents/posts";
 import Post from "./compontents/post";
+import { HelmetProvider} from 'react-helmet-async'
 
 function App() {
     return (
         <>
             <BR>
+                <HelmetProvider>
                 <Navbar/>
                 <div className="initial-content">
                     <div id="main" role="main">
@@ -26,7 +28,7 @@ function App() {
                         </Switch>
                     </div>
                 </div>
-
+                </HelmetProvider>
             </BR>
             <Footer/>
         </>
