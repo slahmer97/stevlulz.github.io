@@ -14,3 +14,4 @@ const posts = [
     {title:title2, time:time2, body:body2}
 ]
 ```
+* For math eq we are using **mathjax** checkout **post2.js** for example.
