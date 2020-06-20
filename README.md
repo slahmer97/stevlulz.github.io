@@ -14,4 +14,4 @@ const posts = [
     {title:title1, time:time1, body:body1},
 ]
 ```
-* For math eq we are using **mathjax** checkout **post2.js** for example.
+* For math eq we are using **mathjax** checkout **post2.js** for example you may also consider [this](http://asciimath.org/).

@@ -9,13 +9,13 @@ class Navbar extends PureComponent {
                     <div className="masthead__menu">
                         <nav id="site-nav" className="greedy-nav">
 
-                            <Link className="site-title" to="/"> Blog </Link>
+                            <a className="site-title" href="/"> Blog </a>
                             <ul className="visible-links">
                                 <li className="masthead__menu-item">
-                                    <Link to="/about">About</Link>
+                                    <a href="/about">About</a>
                                 </li>
                                 <li className="masthead__menu-item">
-                                    <Link to="/posts">Posts</Link>
+                                    <a href="/posts">Posts</a>
                                 </li>
                             </ul>
 
