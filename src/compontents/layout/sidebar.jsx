@@ -1,8 +1,8 @@
 import React from 'react';
 import {ADDRESS, DESCRIPTION, EMAIL_LINK, FACEBOOK_LINK, FULLNAME, GITHUB_LINK} from "../../constants";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope, faMapMarker  } from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faFacebook, faGithub} from '@fortawesome/free-brands-svg-icons'
+import {faEnvelope, faMapMarker} from '@fortawesome/free-solid-svg-icons'
 import avatar from "./avatar.jpg";
 
 function Sidebar(props) {
